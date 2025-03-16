@@ -31,6 +31,9 @@ const Listings = ({ listings, category }: Props) => {
   }, [category])
 
   const renderItems: ListRenderItem<ListingType> = ({ item }) => {
+    if(category !== item.category && category !== "All"){
+      return null;
+    }
     return (
       <Link href={`/listing/${item.id}`} asChild>
         <TouchableOpacity>

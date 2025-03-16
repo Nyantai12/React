@@ -9,6 +9,7 @@ import { useHeaderHeight } from '@react-navigation/elements'
 import { Stack } from 'expo-router'
 import React, { useState } from 'react'
 import {
+  FlatList,
   Image,
   ScrollView,
   StyleSheet,
@@ -47,7 +48,7 @@ const Page = () => {
             <TouchableOpacity
               onPress={() => {}}
               style={{
-                marginRight: 20,
+                marginRight:20,
                 backgroundColor: Colors.white,
                 padding: 10,
                 borderRadius: 10,
@@ -80,8 +81,8 @@ const Page = () => {
               <Ionicons name="options" size={28} color={Colors.white} />
             </TouchableOpacity>
           </View>
-
-          <CategoryButtons onCagtegoryChanged={onCatChanged} />
+         
+      <CategoryButtons onCagtegoryChanged={onCatChanged} />
 
           <Listings listings={listingData} category={category} />
 
